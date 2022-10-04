@@ -5,7 +5,7 @@ node {
     stage("Build") {
         bat 'npm install'
         bat 'npm fund'
-        bat 'npm audt fix'
+        bat 'npm audit fix'
         bat 'ng build --prod'
     }
 }
