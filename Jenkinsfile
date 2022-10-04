@@ -4,7 +4,9 @@ node {
     }
     stage("Build") {
         bat 'npm install'
-        bat 'ng serve'
         bat 'ng build --prod'
     }
+    stage('build docker image'){
+        bat 'docker build -t ass-0 .'
+     }
 }
