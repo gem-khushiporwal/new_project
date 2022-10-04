@@ -10,3 +10,6 @@ node {
         bat 'docker build -t ass-0 .'
      }
 }
+
+
+
