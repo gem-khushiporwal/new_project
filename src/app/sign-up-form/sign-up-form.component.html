@@ -1,0 +1,61 @@
+<h1>Sign-Up </h1>
+<div class="container">
+
+    <form #login="ngForm" (ngSubmit)="submit(login)">
+    <div class="form-group">
+        <label for="name">Name: </label>
+        <input
+        required=""
+        type="text"
+        class="form-control"
+        name="name"
+         >
+         
+    </div>
+    <pre></pre>
+    <div class="form-group">
+        <label for="fname">Father's Name: </label>
+        <input
+        required
+        type="text"
+        class="form-control"
+        name="fname"
+         >
+    </div>
+    <pre></pre>
+    <div class="form-group">
+        <label for="email">Email: </label>
+        <input
+        required=""
+        type="email"
+        class="form-control"
+        name="email"
+         >
+         
+    </div>
+    <pre></pre>
+    <div class="form-group">
+        <label for="password">Password: </label>
+        <input
+        required=""
+        type="password"
+        class="form-control"
+        name="password"
+         >
+    </div>
+    <pre></pre>
+    <div class="form-group">
+        <label for="phnumber">Mobile Number: </label>
+        <input
+        required
+        type="text"
+        class="form-control"
+        name="phnumber"
+         >
+    </div>
+    <pre></pre>
+    <button class="btn btn-primary" type="submit" ng-click="validate()">Submit</button>
+    <pre></pre>
+    <a routerLink="/login-form">Already have an account? Click to login</a>
+    </form>
+</div>

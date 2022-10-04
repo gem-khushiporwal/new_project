@@ -1,0 +1,71 @@
+<h1>Registration form</h1>
+
+<div class="container">
+    <form #login="ngForm" (ngSubmit)="submit(login)">
+        <div class="form-group">
+            <label for="name">Name: </label>
+            <input
+            required
+            type="text"
+            class="form-control"
+            name="name"
+            ngModel maxlength="25"
+            >
+        </div>
+        <pre></pre>
+        <div class="form-group">
+            <label for="collegename">College Name: </label>
+            <input
+            required
+            type="text"
+            class="form-control"
+            name="collegename"
+             >
+        </div>
+        <pre></pre>
+        <div class="form-group">
+            <label for="cgpa">CGPA: </label>
+            <input
+            required
+            type="text"
+            class="form-control"
+            name="cgpa"
+             >
+        </div>
+        <pre></pre>
+        <div class="form-group">
+            <label for="passingyear">Year Of Passing: </label>
+            <input
+            required
+            type="text"
+            class="form-control"
+            name="passingyear"
+            />
+        </div>
+        <pre></pre>
+        <div class="form-group">
+            <label for="joiningdate">Date Of Joining: </label>
+            <input
+            required
+            type="text"
+            class="form-control"
+            name="joiningdate"
+            
+            />
+        </div>
+        <pre></pre>
+        <div class="form-group">
+            <label for="skills">Skills: </label>
+            <input
+            required
+            type="text"
+            class="form-control"
+            name="skills"
+            
+            />
+        </div>
+        <pre></pre>
+        <button class="btn btn-primary" type="submit">Submit</button>
+        <button style="margin-left: 10px" class="btn" type="reset">Reset</button>
+    </form>
+</div>
