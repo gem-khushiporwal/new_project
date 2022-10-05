@@ -9,6 +9,10 @@ node {
     stage('build docker image'){
         bat 'docker build -t ang-app:latest .'
      }
+     stage('push image to nexus'){
+        bat 'docker tag ang-app 127.0.0.1:9001/repository/docker_nexus/ang-app'
+        bat 'docker push 127.0.0.1:9001/repository/docker_nexus/ang-app'
+     }
 }
 
 
