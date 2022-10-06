@@ -16,6 +16,7 @@ node {
      }
      stage('deploy to K8s'){
         bat 'kubectl apply -f deploy-service.yml'
+     }    
 }
 
 
