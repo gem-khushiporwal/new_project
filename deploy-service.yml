@@ -17,8 +17,11 @@ spec:
       containers:
       - name: myapp
         image: 127.0.0.1:9001/repository/docker_nexus/ang-app:01
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
+      imagePullSecrets:
+        -  name: nexus-secret    
 
 ---
 apiVersion: v1

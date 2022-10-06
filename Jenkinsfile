@@ -17,6 +17,7 @@ node {
      stage('deploy to K8s'){
         kubeconfig(credentialsId: '7255e1c5-97b6-4e52-b0f0-fcb6f04e9559', serverUrl: 'https://127.0.0.1:55046') {
              bat 'kubectl apply -f deploy-service.yml'
+             bat 'kubectl apply -f nexus-secret.yml'
 }
         
      }    
