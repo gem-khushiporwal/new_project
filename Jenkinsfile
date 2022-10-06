@@ -15,7 +15,7 @@ node {
         bat 'docker push 127.0.0.1:9001/repository/docker_nexus/ang-app:01'
      }
      stage('deploy to K8s'){
-        bat 'kubectl apply -f deploy-service.yml --context minikube'
+        bat 'kubectl apply -f deploy-service.yml'
      }    
 }
 
