@@ -20,6 +20,19 @@ steps:
     npm install 
     ng build --prod
   displayName: 'npm install and build'
+- task: VisualStudioTestPlatformInstaller@1
+  inputs:
+    packageFeedSelector: 'nugetOrg'
+    versionSelector: 'latestPreRelease'
+- task: VSTest@2
+  inputs:
+      testSelector: 'testAssemblies'
+      testAssemblyVer2: '**'
+      searchFolder: '$(System.DefaultWorkingDirectory)'
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/TEST-*.xml'
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: '$(Pipeline.Workspace)'
